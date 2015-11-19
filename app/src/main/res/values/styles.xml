@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- 白天 -->
+    <style name="DayTheme">
+        <!-- 文本_颜色_位置/标注 -->
+        <item name="t_color_title">#666666</item>
+        <!-- 背景_颜色_位置/标注 -->
+        <item name="b_color_title">#ffffff</item>
+        <!-- 线条_颜色_位置/标注 -->
+        <item name="l_color_title">#dddddd</item>
+    </style>
+    <!-- 夜间 -->
+    <style name="NightTheme">
+        <!-- 文本_颜色_位置/标注 -->
+        <item name="t_color_title">#ffffff</item>
+        <!-- 背景_颜色_位置/标注 -->
+        <item name="b_color_title">#000000</item>
+        <!-- 线条_颜色_位置/标注 -->
+        <item name="l_color_title">#ff0000</item>
+    </style>
+
+    <style name="DialogTransparent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@anim/empty</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

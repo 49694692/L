@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 文本_颜色_位置/标注 -->
+    <attr name="t_color_title" format="color"></attr>
+    <!-- 背景_颜色_位置/标注 -->
+    <attr name="b_color_title" format="color"></attr>
+    <!-- 线条_颜色_位置/标注 -->
+    <attr name="l_color_title" format="color"></attr>
+</resources>
