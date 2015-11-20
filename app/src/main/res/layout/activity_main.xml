@@ -7,11 +7,13 @@
 
     <TextView
         android:id="@+id/tv_test"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:padding="10dp"
+        android:text="切换theme"
+        android:gravity="center"
         android:textColor="?attr/t_color_title"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
 
     <Button
