@@ -23,7 +23,7 @@
         <activity android:name=".activity.SecActivity" />
         <activity android:name=".activity.ThrActivity" />
         <activity
-            android:name=".activity.CenterActivity"
+            android:name=".activity.CenterAnimActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
     </application>
 

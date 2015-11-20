@@ -8,7 +8,7 @@ import android.os.Looper;
 import android.support.v4.app.Fragment;
 
 import com.l.l_theme.R;
-import com.l.l_theme.activity.CenterActivity;
+import com.l.l_theme.activity.CenterAnimActivity;
 
 
 public class ThemeManager {
@@ -186,7 +186,7 @@ public class ThemeManager {
                 if (activity == null)
                     return;
                 this.bitmap = bitmap;
-                activity.startActivity(new Intent(activity, CenterActivity.class));
+                activity.startActivity(new Intent(activity, CenterAnimActivity.class));
                 centerAnim(activity);
                 break;
         }
