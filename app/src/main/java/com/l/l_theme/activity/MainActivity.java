@@ -45,7 +45,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         themeBoolean = !themeBoolean;
 
-        ThemeManager.getInstance().show(ScreenUtil.snapShotWithStatusBar(this));
+        //snapShotWithoutStatusBar 全屏Dialog使用
+        //snapShotWithoutStatusBar Activity跳转使用
+        ThemeManager.getInstance().show(ScreenUtil.snapShotWithoutStatusBar(this), ThemeManager.TYPE_ACTIVITY);
 
         ThemeManager.setDayOrNightTheme(themeBoolean, true, MainActivity.this, 50);
 

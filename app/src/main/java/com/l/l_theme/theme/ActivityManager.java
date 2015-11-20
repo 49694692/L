@@ -34,6 +34,12 @@ public class ActivityManager {
             activities.remove(activities.size() - 1);
     }
 
+    public Activity getLast() {
+        if (activities.size() > 0)
+            return activities.get(activities.size() - 1);
+        return null;
+    }
+
     public void clear() {
         activities.clear();
     }

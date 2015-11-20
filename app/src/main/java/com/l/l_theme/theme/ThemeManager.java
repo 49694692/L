@@ -1,12 +1,14 @@
 package com.l.l_theme.theme;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.app.Fragment;
 
 import com.l.l_theme.R;
+import com.l.l_theme.activity.CenterActivity;
 
 
 public class ThemeManager {
@@ -163,18 +165,38 @@ public class ThemeManager {
     }
 
     private ThemeDialog themeDialog;
+    public static final int TYPE_DIALOG = 101;
+    public static final int TYPE_ACTIVITY = 102;
 
     private ThemeManager() {
         themeDialog = new ThemeDialog();
     }
 
-    public void show(Bitmap bitmap) {
+    public Bitmap bitmap;
+
+    public void show(Bitmap bitmap, int type) {
         if (bitmap == null)
             return;
-        themeDialog.show(bitmap);
+        switch (type) {
+            case TYPE_DIALOG:
+                themeDialog.show(bitmap);
+                break;
+            case TYPE_ACTIVITY:
+                Activity activity = ActivityManager.getInstance().getLast();
+                if (activity == null)
+                    return;
+                this.bitmap = bitmap;
+                activity.startActivity(new Intent(activity, CenterActivity.class));
+                centerAnim(activity);
+                break;
+        }
     }
 
     public void dissmiss() {
         themeDialog.dissmiss();
+    }
+
+    private void centerAnim(Activity activity) {
+        activity.overridePendingTransition(R.anim.empty, R.anim.empty);
     }
 }
